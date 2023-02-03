@@ -13,3 +13,14 @@ function toggleClickBar() {
         navList.style.display = "block";
     }
 }
+
+
+window.addEventListener("resize", updateSize);
+
+function updateSize() {
+if(window.innerWidth >= 768) {
+    navList.style.display= "block";
+} else if ( window.innerWidth < 768) {
+    navList.style.display = "none";
+}
+}
