@@ -1,0 +1,21 @@
+/* reset CSS*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin flexAlign($content, $item, $direction) {
+  display: flex;
+  justify-content: $content;
+  align-items: $item;
+  flex-direction: $direction;
+}
+
+/* google fonts - poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+$font-family: "Poppins", sans-serif;
+
+/* text color*/
+$text-dark-red: #8b0000;
+$text-dark-gray: #1f1c1c;

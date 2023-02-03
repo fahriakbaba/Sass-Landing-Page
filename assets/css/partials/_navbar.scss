@@ -1,0 +1,67 @@
+@import "./variables";
+@import "./mediaQueries";
+
+.navbar {
+  @include flexAlign(space-between, center, row);
+  padding: 1rem 3rem;
+  box-shadow: 0.5px 0.5px 4px gray;
+
+  @include tablet {
+    flex-direction: column;
+    display: flex;
+  }
+
+  & div {
+    @include tablet {
+      @include flexAlign(space-between, center, row);
+      width: 100%;
+    }
+  }
+
+  .icon {
+    display: none;
+    cursor: pointer;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  & nav {
+    @include tablet {
+      margin-top: 2rem;
+      width: 100%;
+      display: none;
+    }
+  }
+
+  & nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style-type: none;
+    @include tablet {
+      flex-direction: column;
+      margin: 0.5rem auto;
+      width: 100%;
+    }
+
+    & li {
+      padding: 4px 8px;
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    & li a {
+      color: $text-dark-gray;
+      text-decoration: none;
+      transition: color 0.5s, text-shadow 0.5s;
+
+      &:hover {
+        color: $text-dark-red;
+        text-shadow: 0.3px 0.3px 1px $text-dark-red;
+      }
+    }
+  }
+}
