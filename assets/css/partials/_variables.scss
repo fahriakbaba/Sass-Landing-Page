@@ -19,3 +19,11 @@ $font-family: "Poppins", sans-serif;
 /* text color*/
 $text-dark-red: #8b0000;
 $text-dark-gray: #1f1c1c;
+
+
+
+/*custom btn*/
+%btn{
+  display: inline-block;
+  padding: 6px 12px;
+}

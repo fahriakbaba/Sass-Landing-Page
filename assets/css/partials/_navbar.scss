@@ -21,8 +21,23 @@
   .icon {
     display: none;
     cursor: pointer;
+    transition: animation .7s;
+    animation-name: animation-icon;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
     @include tablet {
       display: block;
+    }
+    @keyframes animation-icon {
+      0% {
+        transform: scale(.9);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(.9);
+      }
     }
   }
 
@@ -60,7 +75,7 @@
 
       &:hover {
         color: $text-dark-red;
-        text-shadow: 0.3px 0.3px 1px $text-dark-red;
+        text-shadow: 0.3px 0.3px .5px $text-dark-red;
       }
     }
   }

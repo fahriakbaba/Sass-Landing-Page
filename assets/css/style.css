@@ -9,6 +9,7 @@
 
 /* google fonts - poppins */
 /* text color*/
+/*custom btn*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -35,10 +36,41 @@
 .navbar .icon {
   display: none;
   cursor: pointer;
+  transition: -webkit-animation 0.7s;
+  transition: animation 0.7s;
+  transition: animation 0.7s, -webkit-animation 0.7s;
+  -webkit-animation-name: animation-icon;
+          animation-name: animation-icon;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 @media (max-width: 768px) {
   .navbar .icon {
     display: block;
+  }
+}
+@-webkit-keyframes animation-icon {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes animation-icon {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
   }
 }
 @media (max-width: 768px) {
@@ -77,7 +109,7 @@
 }
 .navbar nav ul li a:hover {
   color: #8b0000;
-  text-shadow: 0.3px 0.3px 1px #8b0000;
+  text-shadow: 0.3px 0.3px 0.5px #8b0000;
 }
 
 /* reset CSS*/
@@ -89,6 +121,13 @@
 
 /* google fonts - poppins */
 /* text color*/
+/*custom btn*/
+main.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }/*# sourceMappingURL=style.css.map */
