@@ -1,5 +1,21 @@
 main.hero {
-    display: flex;
-    justify-content: space-between;
-    padding: 3%;
+    @include flexAlign(space-between, center, row);
+
+    & .image {
+        figcaption {
+            text-align: right;
+            font-size: .65rem;
+            margin-right: 5px;
+        }
+        img {
+            box-shadow: .5px .5px 4px black;
+            border-radius: 5px;
+            @include desktop {
+                width: 400px;
+            }
+            @include tv {
+                width: 500px;
+            }
+        }
+    }
 }

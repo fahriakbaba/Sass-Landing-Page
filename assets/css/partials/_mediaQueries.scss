@@ -7,7 +7,30 @@
 
 // for mobile
 @mixin mobile {
-    @media (max-width: 280px) {
+    @media (max-width: 480px) {
         @content;
     }
 }
+
+
+//for laptop
+@mixin laptop {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+//for desktop
+@mixin desktop {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+//for tv and extra large screen
+@mixin tv {
+    @media (min-width: 1201px) {
+        @content;
+    }
+}
+
