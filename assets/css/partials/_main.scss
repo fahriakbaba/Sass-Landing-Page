@@ -1,7 +1,48 @@
+h3{
+    font-size: map-get($fontSizes , x-large);
+    text-align: center;
+    margin-top: 12px;
+    color: $text-dark-red;
+    @include tablet {
+        font-size: map-get($fontSizes, large);
+    }
+}
+
 main.hero {
     @include flexAlign(space-between, center, row);
+    @include desktop {
+        @include flexAlign(space-between, center, column);
+    }
+    & section {
+        h4{
+            font-size: map-get($fontSizes, large);
+            @include tablet {
+                font-size: map-get($fontSizes, normal);
+            }
+        }
+
+        p{
+            font-size: map-get($fontSizes, normal);
+            text-indent: 10px;
+            margin-top: 5px;
+            @include tablet {
+                font-size: map-get($fontSizes, small);
+            }
+        }
+
+        ul li {
+            line-height: 1.25rem;
+            @include tablet {
+                font-size: map-get($fontSizes, x-small);
+            }
+        }
+    }
 
     & .image {
+        @include desktop {
+            width: 100%;
+            margin-top: 1rem;
+        }
         figcaption {
             text-align: right;
             font-size: .65rem;
@@ -11,11 +52,18 @@ main.hero {
             box-shadow: .5px .5px 4px black;
             border-radius: 5px;
             @include desktop {
-                width: 400px;
+                width: 100%;
             }
             @include tv {
                 width: 500px;
             }
         }
+    }
+}
+
+button {
+    @extend %btn;
+    @include tablet {
+        font-size: map-get($fontSizes, x-small);
     }
 }

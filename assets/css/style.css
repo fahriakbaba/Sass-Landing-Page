@@ -10,8 +10,27 @@
 /*mixin */
 /* google fonts - poppins */
 /* text color*/
-/*border feature */
+/*font-size */
 /*custom btn*/
+button {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #8b0000;
+  background-color: #8b0000;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+button:hover {
+  background-color: white;
+  color: #8b0000;
+  border-color: #8b0000;
+}
+
 /*padding and margin */
 .p-1 {
   padding: 1rem;
@@ -319,30 +338,14 @@
 .navbar .icon {
   display: none;
   cursor: pointer;
-  transition: -webkit-animation 0.7s;
   transition: animation 0.7s;
-  transition: animation 0.7s, -webkit-animation 0.7s;
-  -webkit-animation-name: animation-icon;
-          animation-name: animation-icon;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-name: animation-icon;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 @media (max-width: 768px) {
   .navbar .icon {
     display: block;
-  }
-}
-@-webkit-keyframes animation-icon {
-  0% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(0.9);
   }
 }
 @keyframes animation-icon {
@@ -405,8 +408,27 @@
 /*mixin */
 /* google fonts - poppins */
 /* text color*/
-/*border feature */
+/*font-size */
 /*custom btn*/
+button {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #8b0000;
+  background-color: #8b0000;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+button:hover {
+  background-color: white;
+  color: #8b0000;
+  border-color: #8b0000;
+}
+
 /*padding and margin */
 .p-1 {
   padding: 1rem;
@@ -688,11 +710,63 @@
   margin: 5rem 0;
 }
 
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 12px;
+  color: #8b0000;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
 main.hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+}
+@media (max-width: 1200px) {
+  main.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+main.hero section h4 {
+  font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+  main.hero section h4 {
+    font-size: 1rem;
+  }
+}
+main.hero section p {
+  font-size: 1rem;
+  text-indent: 10px;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  main.hero section p {
+    font-size: 0.8rem;
+  }
+}
+main.hero section ul li {
+  line-height: 1.25rem;
+}
+@media (max-width: 768px) {
+  main.hero section ul li {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 1200px) {
+  main.hero .image {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 main.hero .image figcaption {
   text-align: right;
@@ -705,12 +779,18 @@ main.hero .image img {
 }
 @media (max-width: 1200px) {
   main.hero .image img {
-    width: 400px;
+    width: 100%;
   }
 }
 @media (min-width: 1201px) {
   main.hero .image img {
     width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 0.6rem;
   }
 }
 

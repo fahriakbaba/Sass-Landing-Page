@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 /*mixin */
 @mixin flexAlign($content, $item, $direction) {
   display: flex;
@@ -22,12 +21,33 @@ $font-family: "Poppins", sans-serif;
 $text-dark-red: #8b0000;
 $text-dark-gray: #1f1c1c;
 
-/*border feature */
+/*font-size */
+$fontSizes: (
+  "x-small": .6rem,
+  "small": .8rem,
+  "normal": 1rem,
+  "large": 1.25rem,
+  "x-large": 1.5rem
+);
 
 /*custom btn*/
 %btn{
   display: inline-block;
   padding: 6px 12px;
+  cursor: pointer;
+  transition: color .5s, background-color .5s;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid $text-dark-red;
+  background-color: $text-dark-red;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  &:hover {
+    background-color: white;
+    color: $text-dark-red;
+    border-color: $text-dark-red;
+  }
 }
 
 /*padding and margin */
